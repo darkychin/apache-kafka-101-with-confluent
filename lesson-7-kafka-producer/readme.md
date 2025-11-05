@@ -1,6 +1,8 @@
 # Lesson 7: Hands-on Exercise: Kafka Producer  
 Source of learning: https://developer.confluent.io/courses/apache-kafka/get-started-hands-on/
 
+Date: 31 October 2025
+
 Starting from section **"Set Up the Confluent CLI"**.
 
 I will be using docker to complete this tutorial for reasons:
