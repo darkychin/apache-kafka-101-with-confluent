@@ -1,0 +1,10 @@
+%6|1762265909.630|GETSUBSCRIPTIONS|Confluent-CLI_v4.43.0#producer-1| [thrd:main]: Telemetry client instance id changed from AAAAAAAAAAAAAAAAAAAAAA to dfxe/1jGSDib6DO6UlKg/Q
+# Required connection configs for Kafka producer, consumer, and admin
+bootstrap.servers=pkc-7qyr9j.ap-southeast-5.aws.confluent.cloud:9092
+security.protocol=SASL_SSL
+sasl.mechanisms=PLAIN
+sasl.username=USERNAME
+sasl.password=PASSWORD
+
+# Best practice for higher availability in librdkafka clients prior to 1.7
+session.timeout.ms=45000
