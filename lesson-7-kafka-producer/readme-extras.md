@@ -17,6 +17,10 @@ RUN /bin/echo $(cat /etc/group)   # print all group in the system
 
 # execution failed with error, `failed to solve: process "/bin/sh -c /bin/sh -c chown $HOST_NAME /etc"` 
 RUN /bin/sh -c chown $HOST_NAME /etc   # add permission for $HOST_NAME to access `/etc`
+
+# execution success
+RUN chown $HOST_NAME /etc   # add permission for $HOST_NAME to access `/etc`
+
 # ...
 ```
 Credit: https://stackoverflow.com/a/39777387/7939633
@@ -128,13 +132,46 @@ ADD alpine-minirootfs-3.22.2-x86_64.tar.gz / # buildkit
 Credit
 - GrokAI (verified)
 
-## 5. Run dockerbuild with echos and show max verbose
+## 5. Run dockerbuild with printed error and show max verbose
 ```sh
 docker build --progress=plain --no-cache ... . 
 ```
 Source
 - https://stackoverflow.com/a/67682576/7939633
 - GrokAI (verified)
+
+## 6. User id permission are inherited from Docker host to Docker container
+When directory eg: `/test` is created by host user, the user with the same id in the container can inherit the same permission.
+
+Examples:  
+Base docker run with mount
+```sh
+docker run \
+-v ./test:/test \
+# ...
+```
+
+### Situation 1
+Host User Id: 1000  
+Container User Id: 1000
+
+1. Create a user with id 1000
+2. Switch to user id 1000
+3. Add a file into `/test`
+4. Success
+
+Container user allow to read and write to `/test`
+
+### Situation 2
+Host User Id: 1000  
+Container User Id: 2358
+
+1. Create a user with id 2358
+2. Switch to user id 2358
+3. Add a file into `/test`
+4. Failed! Permission denied.
+
+Container user is not allow to read or write to `/test`
 
 # Linux - busybox
 
