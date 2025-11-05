@@ -1,5 +1,6 @@
 # For Generating the readable config file
 
+# extend from confluent-cli
 FROM confluentinc/confluent-cli:4.43.0
 
 # Switch to root temporarily to add new user to group
