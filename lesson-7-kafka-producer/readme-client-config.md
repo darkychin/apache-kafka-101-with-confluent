@@ -117,7 +117,7 @@ confluent login --save
 ### Step 6: Generate client config file
 Run command below after you have selected your **environment** and **cluster**, or you can just pass them in directly in the command.
 
-This command will generate "my-client-config-file.config" under host directory "/config" (config file example can be found [here](./config/my-client-config-file%20copy.config.sample)).
+This command will generate "my-client-config-file.config" under host directory "/config" (config file example can be found [here](./config/my-client-config-file.config.sample)).
 
 If any error occurred, it will log them in the terminal.
 ```sh
