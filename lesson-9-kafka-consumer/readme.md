@@ -209,6 +209,8 @@ Run command below and it will attach the container `kafka-consumer` in the main 
 docker-compose -f lesson-9-kafka-consumer/docker-compose.yml up --build --attach kafka-consumer
 ```
 
+[Source](https://stackoverflow.com/a/53775569/7939633)
+
 ## Step 7: Verify consumer result
 
 Your terminal should show the earliest messages in the Topic - thermostat_readings and subsequently waiting for new messages.
