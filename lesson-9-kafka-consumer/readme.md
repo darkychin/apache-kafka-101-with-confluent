@@ -278,6 +278,8 @@ You can verify the offset is removed via Confluent Cloud.
 
 You will find that the consumer had disappeared from the lineage flow.
 
+[Source](https://docs.confluent.io/cloud/current/client-apps/offsets-consumer.html#reset-an-offset)
+
 ## Good to have for this tutorial
 
 - [ ] Create a python producer script/postman script instead of login confluent cli to post messages
