@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  kafka-consumer:
+    container_name: kafka-consumer
+    build:
+      context: .
+
+  confluent-cli:
+    container_name: compose-confluent-cli
+    image: confluentinc/confluent-cli:4.43.0
+    # solution: https://stackoverflow.com/a/39150040/7939633
+    stdin_open: true  # docker run -i
+    tty: true         # docker run -t
