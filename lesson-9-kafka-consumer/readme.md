@@ -1,10 +1,14 @@
-# Lesson 7: Hands-on Exercise: Kafka Producer
+# Lesson 9: Hands-on Exercise: Kafka Consumer
 
 Source of learning: https://developer.confluent.io/courses/apache-kafka/exercise-kafka-consumers/
 
 Date: 17 November 2025
 
 We will use `docker compose` because it is easier to setup and we need two terminals.
+
+## Prerequsite
+
+- docker is installed and running
 
 ## Step 1: Retrieve config data and setup API key and secret
 
