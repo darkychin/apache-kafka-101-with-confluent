@@ -88,7 +88,7 @@ confluent kafka cluster use <Cluster_Id>
 
 2. Then use the API key with command
 ```sh
-confluent api=key use <API_Key>
+confluent api-key use <API_Key>
 ```
 
 3. [optional] Click [here](./readme-client-config.md) to learn how to create a client config.
