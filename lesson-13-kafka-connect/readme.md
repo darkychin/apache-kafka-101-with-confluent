@@ -54,4 +54,10 @@ confluent kafka topic consume --from-beginning inventory
 # print results in json
 ```
 
+## Step 4: Stop your connector
+
+After finish your connector usage, remember to pause your data connector to avoid unnecessary quota wastage.
+
+Go to **Connectors** > **InventoryGenerator** > Click button "Pause"
+
 **Congratulations!** You have completed this tutorial with docker!
