@@ -53,7 +53,7 @@ confluent api-key create --resource <CLUSTER_ID>
 # or
 
 # Store the existing key
-confluent api-key store --resource <Cluster_Id> <API_Key> <API_Secret>
+confluent api-key store --resource <CLUSTER_ID> <API_KEY> <API_SECRET>
 
 
 # Then use the target key
@@ -244,7 +244,7 @@ confluent login --save
 confluent environment use <ENV_ID> && confluent kafka cluster use <CLUSTER_ID>
 
 # Store the existing key
-confluent api-key store --resource <Cluster_Id> <API_Key> <API_Secret>
+confluent api-key store --resource <CLUSTER_ID> <API_KEY> <API_SECRET>
 
 # Use the target key
 confluent api-key use <API Key> --resource <CLUSTER_ID>

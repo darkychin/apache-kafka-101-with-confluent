@@ -78,11 +78,11 @@ Flag `--save` here will store your credential to a local file in the container a
 ```sh
 # select your environment
 # run `confluent environment list` to list your available environment(s)
-confluent environment use <Env_Id>
+confluent environment use <ENV_ID>
 
 # select your cluster
 # run `confluent kafka cluster list` to list your available cluster(s)
-confluent kafka cluster use <Cluster_Id>
+confluent kafka cluster use <CLUSTER_ID>
 ```
 
 ### 3. Use an API key and secret in the CLI
@@ -90,19 +90,19 @@ confluent kafka cluster use <Cluster_Id>
 1.  a. Add existing API key to the CLI with command
 
     ```sh
-    confluent api-key store --resource <Cluster_Id> <API_Key> <API_Secret>
+    confluent api-key store --resource <CLUSTER_ID> <API_KEY> <API_SECRET>
     ```
 
     b. Or create a new key with the command
 
     ```sh
-    confluent api-key create --resource <Cluster_Id>
+    confluent api-key create --resource <CLUSTER_ID>
     ```
 
 2.  Then use the API key with command
 
 ```sh
-confluent api-key use <API_Key>
+confluent api-key use <API_KEY>
 ```
 
 3. [optional] Click [here](./readme-client-config.md) to learn how to create a client config.
