@@ -266,6 +266,8 @@ In the same terminal, you can see the consumed events.
 
 ![live-consumer-results](./images/live-consumer-results.png)
 
+**Congratulations!** You have completed this tutorial with docker!
+
 ## Help
 
 ### 1. How to reset the kafka partition offset?
